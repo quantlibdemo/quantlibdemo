@@ -11,4 +11,5 @@ apt -y autoremove && \
 apt -y autoclean && \
 apt -y clean && \
 rm -rf /var/lib/apt/lists/* && \
+cd QuantLib-1.15 && make install && \
 exit 0
