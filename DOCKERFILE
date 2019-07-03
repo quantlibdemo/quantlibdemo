@@ -1,9 +1,22 @@
-FROM gitpod/workspace-full
+FROM gitpod/workspace-full:latest
 USER root
 RUN \
+apt update && \
+apt -y upgrade && \
+apt -y install bash build-essential clang cmake cppcheck curl gdb git gperf \
+iputils-ping libboost-all-dev libgl1-mesa-dev libmlpack-dev \
+linux-tools-generic nano valgrind wget spawn-fcgi libfcgi-dev software-properties-common\
+qt5-default && \
+apt -y autoremove && \
+apt -y autoclean && \
+apt -y clean && \
+rm -rf /var/lib/apt/lists/* && \
 wget https://bintray.com/quantlib/releases/download_file?file_path=QuantLib-1.15.tar.gz && \
 tar -xf download_file\?file_path\=QuantLib-1.15.tar.gz && \
 rm -rf download_file\?file_path\=QuantLib-1.15.tar.gz && \
 cd QuantLib-1.15 && \
 ./configure && \
+make && \
+make install && \
+ldconfig && \
 exit 0
