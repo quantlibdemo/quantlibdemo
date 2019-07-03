@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full
+FROM gitpod/workspace-full:latest
 USER root
 RUN \
 apt update && \
@@ -11,5 +11,5 @@ apt -y autoremove && \
 apt -y autoclean && \
 apt -y clean && \
 rm -rf /var/lib/apt/lists/* && \
-cd QuantLib-1.15 && make install && \
+./install_quantlib.sh && \
 exit 0
