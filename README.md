@@ -18,4 +18,8 @@ Purpose of workspace:
 Examples are in ``src`` folder.
 
 * To compile boost test use ``g++ boost_test.cpp -o boost``.
+<<<<<<< HEAD
 * To compile quantlib test use ``g++ quantlib_test.cpp -o quantlib``.
+=======
+* To compile quantlib test use ``g++ quantlib_test.cpp -o quantlib``.
+>>>>>>> ebb0877f7d08bf6850a3133b09c93db9c5c91743
