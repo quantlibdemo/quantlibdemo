@@ -11,5 +11,5 @@ apt -y autoremove && \
 apt -y autoclean && \
 apt -y clean && \
 rm -rf /var/lib/apt/lists/* && \
-cd QuantLib-1.15 && make install && ldconfig && \
+./install_quantlib.sh && \
 exit 0
