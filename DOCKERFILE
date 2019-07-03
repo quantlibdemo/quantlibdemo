@@ -1,5 +1,7 @@
 FROM gitpod/workspace
 USER root
 RUN \
-apt -y install libboost-all-dev aptitude && \
+apt -y install libboost-all-dev && \
+apt -y install aptitude && \
+aptitude search boost && \
 exit 0
