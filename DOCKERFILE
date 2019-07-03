@@ -1,5 +1,9 @@
 FROM gitpod/workspace-full
 USER root
 RUN \
-./install_quantlib.sh && \
+wget https://bintray.com/quantlib/releases/download_file?file_path=QuantLib-1.15.tar.gz && \
+tar -xf download_file\?file_path\=QuantLib-1.15.tar.gz && \
+rm -rf download_file\?file_path\=QuantLib-1.15.tar.gz && \
+cd QuantLib-1.15 && \
+./configure && \
 exit 0
