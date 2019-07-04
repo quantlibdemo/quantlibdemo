@@ -13,7 +13,7 @@ Purpose of workspace:
 Examples are in ``src`` folder.
 
 * To compile boost test use ``g++ boost_test.cpp -o boost``.
-* To compile quantlib test use ``g++ quantlib_test.cpp -o quantlib -lQuantLib``.
+* To compile quantlib test use ``g++ quantlib_test.cpp -o quantlib_test -lQuantLib``.
 
 How to use the workspace:
 
